@@ -25,7 +25,7 @@ pipeline {
     }
     stage("Email build status sending") {
       steps {
-         mail body: „${env.JOB_NAME} – Build ${env.BUILD_NUMBER} – ${currentBuild.currentResult} \n\nCheck console output at ${env.BUILD_URL} to view the results.”, subject: „${env.JOB_NAME} – Build ${env.BUILD_NUMBER} – ${currentBuild.currentResult}”, to: ‘dprtraining1@gmail.com’
+         mail body: „${env.JOB_NAME} – Build ${env.BUILD_NUMBER} – ${currentBuild.currentResult} Check console output at ${env.BUILD_URL} to view the results.”, subject: „${env.JOB_NAME} – Build ${env.BUILD_NUMBER} – ${currentBuild.currentResult}”, to: ‘dprtraining1@gmail.com’
       }
     }
   }
